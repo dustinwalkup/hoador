@@ -9,7 +9,8 @@ import DoorIcon from "@/assets/svg/door-icon";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
-const TAB_ICON_SIZE = 20;
+const FONT_AWESOME_ICON_SIZE = 20;
+const MATERIAL_ICON_SIZE = 30; // Slightly larger to match visual weight
 
 function TabBarIcon(props: {
   type: "fontAwesome" | "materialCommunityIcons";
@@ -19,7 +20,7 @@ function TabBarIcon(props: {
   if (props.type === "fontAwesome") {
     return (
       <FontAwesome
-        size={TAB_ICON_SIZE}
+        size={FONT_AWESOME_ICON_SIZE}
         name={props.name as React.ComponentProps<typeof FontAwesome>["name"]}
         color={props.color}
       />
@@ -27,14 +28,14 @@ function TabBarIcon(props: {
   } else {
     return (
       <MaterialCommunityIcons
-        size={20}
+        size={MATERIAL_ICON_SIZE}
         name={
           props.name as React.ComponentProps<
             typeof MaterialCommunityIcons
           >["name"]
         }
         color={props.color}
-        style={{ paddingTop: -20 }}
+        style={{ marginTop: -6, marginBottom: -6 }}
       />
     );
   }
@@ -63,6 +64,7 @@ export default function CustomTabBar({
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const isFocused = state.index === index;
+        const isGarageTab = route.name === "garage";
 
         const onPress = () => {
           const event = navigation.emit({
@@ -78,7 +80,9 @@ export default function CustomTabBar({
 
         const getIcon = () => {
           if (route.name === "index") {
-            return <DoorIcon color={Colors.primary} size={TAB_ICON_SIZE} />;
+            return (
+              <DoorIcon color={Colors.primary} size={FONT_AWESOME_ICON_SIZE} />
+            );
           } else if (route.name === "favorites") {
             return (
               <TabBarIcon
