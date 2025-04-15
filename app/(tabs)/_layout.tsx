@@ -1,18 +1,43 @@
-import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import React from "react";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { Link, Tabs } from "expo-router";
+import { Pressable } from "react-native";
 
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import Colors from "@/constants/Colors";
+import { useColorScheme } from "@/components/useColorScheme";
+import { useClientOnlyValue } from "@/components/useClientOnlyValue";
+import DoorIcon from "@/assets/svg/door-icon";
+import CustomTabBar from "@/components/CustomTabBar";
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
+const TAB_ICON_SIZE = 20;
+
 function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
+  type: "fontAwesome" | "materialCommunityIcons";
+  name: string;
   color: string;
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  if (props.type === "fontAwesome") {
+    return (
+      <FontAwesome
+        size={TAB_ICON_SIZE}
+        name={props.name as React.ComponentProps<typeof FontAwesome>["name"]}
+        color={props.color}
+      />
+    );
+  } else {
+    return (
+      <MaterialCommunityIcons
+        size={60}
+        name={
+          props.name as React.ComponentProps<
+            typeof MaterialCommunityIcons
+          >["name"]
+        }
+        color={props.color}
+      />
+    );
+  }
 }
 
 export default function TabLayout() {
@@ -21,16 +46,24 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         // Disable the static render of the header on web
         // to prevent a hydration error in React Navigation v6.
         headerShown: useClientOnlyValue(false, true),
-      }}>
+        tabBarLabelStyle: {
+          marginTop: 4,
+          fontSize: 12,
+        },
+      }}
+      tabBar={(props) => <CustomTabBar {...props} />}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Explore",
+          tabBarIcon: () => (
+            <DoorIcon color={Colors.primary} size={TAB_ICON_SIZE} />
+          ),
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -38,7 +71,7 @@ export default function TabLayout() {
                   <FontAwesome
                     name="info-circle"
                     size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
+                    color={Colors[colorScheme ?? "light"].text}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                   />
                 )}
@@ -48,10 +81,51 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="favorites"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Favorites",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="heart"
+              type="fontAwesome"
+              color={Colors.primary}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="garage"
+        options={{
+          title: "Garage",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="garage"
+              type="materialCommunityIcons"
+              color={Colors.primary}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="mailbox"
+        options={{
+          title: "Mailbox",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon
+              name="envelope"
+              type="fontAwesome"
+              color={Colors.primary}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="user" type="fontAwesome" color={Colors.primary} />
+          ),
         }}
       />
     </Tabs>
