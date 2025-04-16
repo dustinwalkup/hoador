@@ -8,7 +8,7 @@ import Colors from "@/constants/Colors";
 import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 import DoorIcon from "@/assets/svg/door-icon";
-import CustomTabBar from "@/components/CustomTabBar";
+import { CustomTabBar } from "@/components";
 
 const TAB_ICON_SIZE = 20;
 

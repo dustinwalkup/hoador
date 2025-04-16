@@ -35,7 +35,7 @@ function TabBarIcon(props: {
           >["name"]
         }
         color={props.color}
-        style={{ marginTop: -6, marginBottom: -6 }}
+        style={{ marginTop: -6, marginBottom: -4 }}
       />
     );
   }
