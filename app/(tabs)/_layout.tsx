@@ -4,9 +4,9 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
 
-import Colors from "@/constants/Colors";
-import { useColorScheme } from "@/components/useColorScheme";
-import { useClientOnlyValue } from "@/components/useClientOnlyValue";
+import colors from "@/constants/colors";
+import { useColorScheme } from "@/lib/hooks/useColorScheme";
+import { useClientOnlyValue } from "@/lib/hooks/useClientOnlyValue";
 import DoorIcon from "@/assets/svg/door-icon";
 import { CustomTabBar } from "@/components";
 
@@ -46,7 +46,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: colors[colorScheme ?? "light"].tint,
         // Disable the static render of the header on web
         // to prevent a hydration error in React Navigation v6.
         headerShown: useClientOnlyValue(false, true),
@@ -62,22 +62,23 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: () => (
-            <DoorIcon color={Colors.primary} size={TAB_ICON_SIZE} />
+            <DoorIcon color={colors.primary} size={TAB_ICON_SIZE} />
           ),
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? "light"].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          headerShown: false,
+          // headerRight: () => (
+          //   <Link href="/modal" asChild>
+          //     <Pressable>
+          //       {({ pressed }) => (
+          //         <FontAwesome
+          //           name="info-circle"
+          //           size={25}
+          //           color={colors[colorScheme ?? "light"].text}
+          //           style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+          //         />
+          //       )}
+          //     </Pressable>
+          //   </Link>
+          // ),
         }}
       />
       <Tabs.Screen
@@ -88,7 +89,7 @@ export default function TabLayout() {
             <TabBarIcon
               name="heart"
               type="fontAwesome"
-              color={Colors.primary}
+              color={colors.primary}
             />
           ),
         }}
@@ -101,7 +102,7 @@ export default function TabLayout() {
             <TabBarIcon
               name="garage"
               type="materialCommunityIcons"
-              color={Colors.primary}
+              color={colors.primary}
             />
           ),
         }}
@@ -114,7 +115,7 @@ export default function TabLayout() {
             <TabBarIcon
               name="envelope"
               type="fontAwesome"
-              color={Colors.primary}
+              color={colors.primary}
             />
           ),
         }}
@@ -124,7 +125,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="user" type="fontAwesome" color={Colors.primary} />
+            <TabBarIcon name="user" type="fontAwesome" color={colors.primary} />
           ),
         }}
       />

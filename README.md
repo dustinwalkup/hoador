@@ -119,7 +119,7 @@ hoador/
 ### UI Components
 
 - [ ] Create reusable Button component
-- [ ] Create Input component
+- [x] Create Input component
 - [ ] Start building explore page
 - [ ] Create Card component
 - [ ] Create Modal component

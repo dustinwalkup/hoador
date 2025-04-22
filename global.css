@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #528d3f;
+  --skyBlue: #d2f3ff;
+  --lightGrey: #ededed;
+  --forestGreen: #072d03;
+}

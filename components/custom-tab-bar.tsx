@@ -2,9 +2,9 @@ import React from "react";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useColorScheme } from "@/components/useColorScheme";
+import { useColorScheme } from "@/lib/hooks/useColorScheme";
 
-import Colors from "@/constants/Colors";
+import colors from "@/constants/colors";
 import DoorIcon from "@/assets/svg/door-icon";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
@@ -56,8 +56,8 @@ export default function CustomTabBar({
         styles.tabBar,
         {
           paddingBottom: insets.bottom,
-          backgroundColor: Colors[theme].background,
-          borderTopColor: Colors[theme].tabIconDefault,
+          backgroundColor: colors[theme].background,
+          borderTopColor: colors[theme].tabIconDefault,
         },
       ]}
     >
@@ -81,14 +81,14 @@ export default function CustomTabBar({
         const getIcon = () => {
           if (route.name === "index") {
             return (
-              <DoorIcon color={Colors.primary} size={FONT_AWESOME_ICON_SIZE} />
+              <DoorIcon color={colors.primary} size={FONT_AWESOME_ICON_SIZE} />
             );
           } else if (route.name === "favorites") {
             return (
               <TabBarIcon
                 name="heart"
                 type="fontAwesome"
-                color={Colors.primary}
+                color={colors.primary}
               />
             );
           } else if (route.name === "garage") {
@@ -96,7 +96,7 @@ export default function CustomTabBar({
               <TabBarIcon
                 name="garage"
                 type="materialCommunityIcons"
-                color={Colors.primary}
+                color={colors.primary}
               />
             );
           } else if (route.name === "mailbox") {
@@ -104,7 +104,7 @@ export default function CustomTabBar({
               <TabBarIcon
                 name="envelope"
                 type="fontAwesome"
-                color={Colors.primary}
+                color={colors.primary}
               />
             );
           } else if (route.name === "profile") {
@@ -112,7 +112,7 @@ export default function CustomTabBar({
               <TabBarIcon
                 name="user"
                 type="fontAwesome"
-                color={Colors.primary}
+                color={colors.primary}
               />
             );
           }
@@ -131,7 +131,7 @@ export default function CustomTabBar({
             <Text
               style={[
                 styles.labelText,
-                { color: isFocused ? Colors.primary : Colors[theme].text },
+                { color: isFocused ? colors.primary : colors[theme].text },
               ]}
             >
               {options.title}
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     bottom: -8,
     width: "70%",
     height: 5,
-    backgroundColor: Colors.primary,
+    backgroundColor: colors.primary,
   },
   labelText: {
     fontSize: 12,
