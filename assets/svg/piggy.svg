@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="36px" viewBox="0 0 34 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile/Logged-In/Full" transform="translate(-145, -622)">
+            <g id="Group" transform="translate(146, 622)">
+                <rect id="Rectangle" fill="#FFB88F" x="8" y="29" width="5" height="7"></rect>
+                <polygon id="Rectangle" fill="#FFB88F" transform="translate(25, 12.5) scale(-1, 1) translate(-25, -12.5)" points="24.4 10 28 15 22 15"></polygon>
+                <rect id="Rectangle" fill="#FFB88F" x="20" y="29" width="5" height="7"></rect>
+                <ellipse id="Oval" fill="#FFB88F" cx="17.5" cy="22" rx="12.5" ry="12"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="0.25" fill="#FFCA00" cx="18" cy="8.5" rx="4" ry="3.5"></ellipse>
+                <circle id="Oval" fill="#FFCA00" cx="12.5" cy="2.5" r="2.5"></circle>
+                <rect id="Rectangle" fill="#FFFFFF" x="14" y="13" width="8" height="1"></rect>
+                <ellipse id="Oval" fill="#D49570" cx="29" cy="22.5" rx="4" ry="3.5"></ellipse>
+                <ellipse id="Oval" fill="#262626" cx="26.5" cy="18" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval" fill="#8A362A" cx="28.5" cy="23" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval" fill="#8A362A" cx="31.5" cy="23" rx="1" ry="1"></ellipse>
+                <path d="M9,17.5741998 C6.4101613,18.4521997 4.57077547,17.972373 3.48184249,16.1347197 C2.76609824,14.9268495 2.9181397,13.9174594 3.93796687,13.1065494 L3.93793532,13.1065097 C4.39707962,12.7414236 5.06525036,12.8176729 5.43033644,13.2768172 C5.79542251,13.7359615 5.71917326,14.4041322 5.26002897,14.7692183 C5.07209824,14.9186504 4.83908192,15 4.59898214,15 C4.59898214,15 4.59898214,15 4.59898214,15 C1.68567239,15 0.15267834,14 0,12" id="Path-2" stroke="#FFB88F" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

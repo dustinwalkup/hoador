@@ -138,7 +138,7 @@ export default function AutoplayTicker({
       <Pressable
         onPressIn={pauseAnimation}
         onPressOut={resumeAnimation}
-        className="h-16 overflow-hidden"
+        className="h-8 overflow-hidden"
       >
         <Animated.View
           style={{

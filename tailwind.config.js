@@ -10,6 +10,7 @@ module.exports = {
         forestGreen: "var(--forestGreen)",
         skyBlue: "var(--skyBlue)",
         lightGrey: "var(--lightGrey)",
+        blue: "var(--blue)",
       },
     },
   },

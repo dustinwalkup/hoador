@@ -1,4 +1,5 @@
 import { TickerItem } from "@/components/auto-play-ticker";
+import { StatCardProps } from "@/components/stat-card";
 
 export const headlineItems = [
   {
@@ -46,5 +47,39 @@ export const tickerItems: TickerItem[] = [
     item: "Shovel",
     rentee: "Jessie D.",
     renter: "Larry F.",
+  },
+];
+
+interface StatCardItem extends StatCardProps {
+  id: number;
+}
+
+export const statCardItems: StatCardItem[] = [
+  {
+    id: 1,
+    icon: "piggy",
+    iconSize: 36,
+    title: "Verona Hills has saved",
+    subtitle: "$1M this year",
+    buttonText: "Save by renting",
+    reverseTitleOrder: false,
+  },
+  {
+    id: 2,
+    icon: "high-five",
+    iconSize: 48,
+    title: "have been shared",
+    subtitle: "245 items",
+    buttonText: "Recently added",
+    reverseTitleOrder: true,
+  },
+  {
+    id: 3,
+    icon: "three-houses",
+    iconSize: 60,
+    title: "have been improved",
+    subtitle: "40 households",
+    buttonText: "See what your neighbors have done",
+    reverseTitleOrder: true,
   },
 ];

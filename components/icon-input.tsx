@@ -46,6 +46,8 @@ export default function IconInput({
   );
 }
 
+IconInput.displayName = "IconInput";
+
 const styles = StyleSheet.create({
   container: {
     width: "100%",

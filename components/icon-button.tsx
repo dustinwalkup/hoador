@@ -91,6 +91,8 @@ export default function IconButton({
   );
 }
 
+IconButton.displayName = "IconButton";
+
 const styles = StyleSheet.create({
   button: {
     justifyContent: "center",

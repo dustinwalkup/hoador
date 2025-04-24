@@ -2,13 +2,12 @@ import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Link, Tabs } from "expo-router";
-import { Pressable } from "react-native";
 
 import colors from "@/constants/colors";
 import { useColorScheme } from "@/lib/hooks/useColorScheme";
 import { useClientOnlyValue } from "@/lib/hooks/useClientOnlyValue";
 import DoorIcon from "@/assets/svg/door-icon";
-import { CustomTabBar } from "@/components";
+import CustomTabBar from "@/components/custom-tab-bar";
 
 const TAB_ICON_SIZE = 20;
 

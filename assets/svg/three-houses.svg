@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="31px" viewBox="0 0 55 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <polygon id="path-1" points="0 7 8.38378906 1.31145095e-15 17 7 17 21 0 21"></polygon>
+        <polygon id="path-3" points="0 7 8.38378906 1.31145095e-15 17 7 17 21 0 21"></polygon>
+        <polyline id="path-5" points="0.5 8.5 10.3632812 0.5 20.5 8.5"></polyline>
+        <polygon id="path-7" points="0.5 7.66666667 9.87011719 1.43635104e-15 19.5 7.66666667 19.5 23 0.5 23"></polygon>
+        <polyline id="path-9" points="0 8.5 9.86328125 0.5 20 8.5"></polyline>
+        <polyline id="path-11" points="14 16.5 26.8222656 6.5 40 16.5"></polyline>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile/Logged-In/Full" transform="translate(-132, -1032)">
+            <g id="Group-5" transform="translate(133, 1033)">
+                <g id="Rectangle" transform="translate(2, 1)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#2485B0" xlink:href="#path-1"></use>
+                    <rect fill="#FFFFFF" mask="url(#mask-2)" x="6" y="16" width="5" height="9" rx="2.5"></rect>
+                </g>
+                <g id="Rectangle" transform="translate(34.5, 1)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask" fill="#2485B0" xlink:href="#path-3"></use>
+                    <rect fill="#FFFFFF" mask="url(#mask-4)" x="6" y="15" width="5" height="9" rx="2.5"></rect>
+                </g>
+                <g id="Rectangle" transform="translate(32.5, 0)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="Mask" stroke="#979797" stroke-width="2" xlink:href="#path-5"></use>
+                </g>
+                <g id="Rectangle" transform="translate(17, 7)">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFCA00" xlink:href="#path-7"></use>
+                    <rect fill="#FFFFFF" mask="url(#mask-8)" x="7.5" y="16" width="5" height="10" rx="2.5"></rect>
+                </g>
+                <mask id="mask-10" fill="white">
+                    <use xlink:href="#path-9"></use>
+                </mask>
+                <use id="Mask" stroke="#979797" stroke-width="2" xlink:href="#path-9"></use>
+                <mask id="mask-12" fill="white">
+                    <use xlink:href="#path-11"></use>
+                </mask>
+                <use id="Mask" stroke="#979797" stroke-width="2" xlink:href="#path-11"></use>
+            </g>
+        </g>
+    </g>
+</svg>

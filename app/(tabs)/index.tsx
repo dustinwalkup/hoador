@@ -1,12 +1,16 @@
 import React from "react";
 import { Image, Text, ScrollView, View } from "react-native";
 
-import { ThemedView } from "@/components/Themed";
-import { IconButton, IconInput } from "@/components";
-import { headlineItems, tickerItems } from "@/lib/mocks";
+import { ThemedView, ThemedText } from "@/components/Themed";
+// import { IconButton, IconInput, StatCard } from "@/components";
+import { headlineItems, tickerItems, statCardItems } from "@/lib/mocks";
 import AutoplayTicker from "@/components/auto-play-ticker";
+import IconInput from "@/components/icon-input";
+import IconButton from "@/components/icon-button";
+import StatCard from "@/components/stat-card";
 
 const WELCOME_TEXT = "Hey";
+const VERONA_HILLS_BY_THE_NUMBER = "Verona Hills by the number";
 
 export default function TabOneScreen() {
   const name = "Paige";
@@ -30,7 +34,7 @@ export default function TabOneScreen() {
             />
           </View>
           <View>
-            <Text className="py-8 text-3xl text-forestGreen">
+            <Text className="py-8 text-3xl !text-forestGreen">
               {WELCOME_TEXT} {name}!
             </Text>
           </View>
@@ -56,6 +60,17 @@ export default function TabOneScreen() {
           </View>
         </ScrollView>
         <AutoplayTicker tickerItems={tickerItems} />
+        <ThemedView className="p-5">
+          <ThemedText className="pb-8 pt-2 text-2xl">
+            {VERONA_HILLS_BY_THE_NUMBER}
+          </ThemedText>
+
+          <View className="gap-8">
+            {statCardItems.map((item) => (
+              <StatCard key={item.id} {...item} />
+            ))}
+          </View>
+        </ThemedView>
       </ScrollView>
     </ThemedView>
   );

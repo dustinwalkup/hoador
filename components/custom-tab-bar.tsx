@@ -144,6 +144,8 @@ export default function CustomTabBar({
   );
 }
 
+CustomTabBar.displayName = "CustomTabBar";
+
 const styles = StyleSheet.create({
   tabBar: {
     flexDirection: "row",
